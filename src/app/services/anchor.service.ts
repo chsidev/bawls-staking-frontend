@@ -3,7 +3,7 @@ import { clusterApiUrl, Connection, ConfirmOptions, PublicKey, SystemProgram } f
 import { AnchorProvider, Program, setProvider, Idl, Wallet } from '@coral-xyz/anchor';
 import { TOKEN_PROGRAM_ID, getAssociatedTokenAddress } from '@solana/spl-token';
 import * as idlJson from '../idl/bawls_staking.json';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 // @ts-ignore
 import { BN } from 'bn.js';
 
