@@ -3,6 +3,7 @@ import { clusterApiUrl, Connection, ConfirmOptions, PublicKey, SystemProgram } f
 import { AnchorProvider, Program, setProvider, Idl, Wallet } from '@coral-xyz/anchor';
 import { TOKEN_PROGRAM_ID, getAssociatedTokenAddress } from '@solana/spl-token';
 import * as idlJson from '../idl/bawls_staking.json';
+import { environment } from '../../environments/environment.development';
 // @ts-ignore
 import { BN } from 'bn.js';
 
@@ -20,13 +21,12 @@ export class AnchorService {
   readonly SEED_STATE = "state";
 
   readonly COMMUNITY_WALLET = new PublicKey(
-    '79FSmHXEQzsizn57Rhfp9s4qgcNcCBRSK6LSLM1gfjWx'
+    environment.communityWallet
   );
 
   readonly TOKEN_MINT = new PublicKey(
-    'DxUTmqRt49dNsKwM1kzrquMpKsnyMGEpGKeZg1YfUdgJ'
+    environment.tokenMint
   );
-
 
   constructor() {
     this.connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
