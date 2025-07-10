@@ -9,7 +9,7 @@ import { AnchorService } from '../../services/anchor.service';
 import { HistoryComponent } from '../../components/history/history.component';
 import { StakeInfoComponent } from '../../components/stake-info/stake-info.component';
 import { LeaderboardComponent } from '../../components/leaderboard/leaderboard.component';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 // @ts-ignore
 import { BN } from 'bn.js';
 
